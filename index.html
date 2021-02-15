@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entrega 2</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+
+
+<body>
+
+<div class="nom"><center><h1>SEGUNDA ENTREGA</h1></center></div>
+
+
+
+	<form class="f1">
+		<center><h1>Funcion ingresar</h1>
+		<label>Ingrese el nombre :</label>
+		<br>
+		<input type="tex" id="nombi" placeholder="Ingrese el nombre">
+		<br><br>
+		<input type="button" value="Ingresar" onclick="ing();"></center>
+	</form>
+
+	<form class="f2">
+		<center><h1> Funcion Eliminar</h1>
+		<label>nombre que desea eliminar:</label>
+		<br>
+		<input type="text" id="nom" placeholder="Ingrese el valor">
+		<br><br>
+		<input type="button" value="Eliminar" onclick="si();">
+		<br><br>
+		<label>Resultado:</label>
+		<br>
+		<input type="text" id="re" placeholder="Respuesta"></center>
+	</form>
+</body>
+
+<script>
+	
+var vector=["carlos","paula","daniel","pedro",];
+console.log(vector);
+
+var si=function()
+{
+	var i=0;
+	var nom=document.getElementById("nom").value;
+	var ul=vector.length-1; 
+	while(i<vector.length)
+	{
+		if(nom==vector[i])
+		{
+			var ult=vector[ul];
+			vector[ul]=vector[i];
+			vector[i]=ult;
+			vector.pop();
+			console.log(vector);
+			i=vector.length;
+			document.getElementById("re").value="Eliminado con éxito";
+			document.getElementById("nom").value="";
+		}
+		else
+		{
+			i=i+1;
+			if (nom!=vector[i])
+			{
+				document.getElementById("re").value=nom+" no está en el vector";
+			}
+		}
+	}
+}
+
+var ing=function()
+{
+	var nombi=document.getElementById("nombi").value;
+	vector.push(nombi);
+	console.log(vector);
+	document.getElementById("nombi").value="";
+}
+
+</script>
+</html>

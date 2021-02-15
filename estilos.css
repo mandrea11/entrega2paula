@@ -1,0 +1,38 @@
+body
+{
+  background: url(fondo.jpeg);
+}
+
+.nom
+{
+	position: absolute;
+	font-style: oblique;
+	top: 2%;
+	left: 28%;
+	width: 38%;
+	height: 18%;
+	background-color: #F6CEF5;
+}
+
+.f1
+{
+	position: absolute;
+	top: 30%;
+	left: 25%;
+	width: 15%;
+	height: 40%;
+	background-color: #A9BCF5;
+}
+
+.f2
+{
+	position: absolute;
+	top: 28.5%;
+	left: 55%;
+	width: 15%;
+	height: 49%;
+	background-color: #A9BCF5;
+}
+
+
+	
